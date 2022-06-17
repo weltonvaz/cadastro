@@ -1,0 +1,57 @@
+
+.botao {
+    display: block;
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5%;
+    min-width: fit-content;
+    width: 15%;
+    padding: 20px;
+    border: #7189FF 2px solid;
+    background-color: #624CAB;
+    color: #eeeeee;
+    border-radius: 5px;
+    transition: 0.4s;
+    font-size: 1rem;
+}
+
+.botao:hover {
+    color: #eeeeee;
+    background-color: #7189FF;
+    border: #A0DDFF 2px solid;
+    cursor: pointer;
+}
+
+.botao:active {
+    color: black;
+    background-color: #A0DDFF;
+}
+
+/* Estilos para o botão voltar */
+
+.voltar {
+    display: block;
+    font-family: 'proxima nova';
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #eeeeee;
+    border: #7189FF 2px solid;
+    border-radius: 5px;
+    background-color: #624CAB;
+    padding: 20px;
+    transition: 0.3s;
+    text-align: center;
+    min-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    width: 15%;
+}
+
+.voltar:hover {
+    color: #eeeeee;
+    background-color: #7189FF;
+    border: #A0DDFF 2px solid;
+    cursor: pointer;
+}

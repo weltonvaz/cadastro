@@ -1,0 +1,28 @@
+
+.select {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-family: Helvetica;
+    font-size: 1rem;
+    min-width: fit-content;
+    width: 73%;
+    transition: 0.3s;
+}
+
+.select select {
+    border: black solid 2px;
+    border-radius: 5px;
+}
+
+.select select:hover {
+    border: greenyellow solid 2px;
+    border-radius: 5px;
+}
+
+.select select:focus {
+    border: blue solid 2px;
+    border-radius: 5px;
+    outline: none;
+}

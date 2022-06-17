@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/header.css' %}">
+    <link rel="stylesheet" href="{% static './css/reset.css' %}">
+    <link rel="stylesheet" href="{% static './css/table.css' %}">
+    <link rel="stylesheet" href="{% static './css/botao.css' %}">
+    <link rel="stylesheet" href="{% static './css/footer.css' %}">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/5519e027be.js" crossorigin="anonymous"></script>
+    <!--Title-->
+    <title>E-Soft Endereços</title>
+    <!--Icon-->
+    <link rel="shortcut icon" href="{% static './images/icon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Endereços cadastrados</h1>
+    </header>
+
+    <main>
+
+        <div class="table-container">
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Complemento</th>
+                        <th>CEP</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for endereco in stored_addresses %}
+                    <tr>
+                        <td>{{ endereco.rua }}</td>
+                        <td>{{ endereco.bairro }}</td>
+                        <td>{{ endereco.cidade }}</td>
+                        <td>{{ endereco.estado }}</td>
+                        <td>{{ endereco.complemento }}</td>
+                        <td>{{ endereco.cep }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+        <form action="{% url 'cadastro' %}" method="get">
+            <button class="botao" type="submit">Cadastrar novo endereço</button>
+        </form>
+    </main>
+
+    <footer>
+        <p class="footer">Desenvolvido por <a class="link" href="https://github.com/firminoneto11"
+                target="_blank">Firmino
+                Neto</a></p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/firmino-neto-4a0010158/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/firminoneto11" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/firminoneto11/" target="_blank"><i
+                    class="fab fa-instagram-square"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

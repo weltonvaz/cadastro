@@ -1,0 +1,14 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, #624CAB, #C1CEFE);
+}
+
+html {
+    scroll-behavior: smooth;
+}

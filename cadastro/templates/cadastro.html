@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/header.css' %}">
+    <link rel="stylesheet" href="{% static './css/reset.css' %}">
+    <link rel="stylesheet" href="{% static './css/address_form.css' %}">
+    <link rel="stylesheet" href="{% static './css/botao.css' %}">
+    <link rel="stylesheet" href="{% static './css/select.css' %}">
+    <link rel="stylesheet" href="{% static './css/error.css' %}">
+    <link rel="stylesheet" href="{% static './css/footer.css' %}">
+    <!--Sweet Alert Script-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/5519e027be.js" crossorigin="anonymous"></script>
+    <!--Title-->
+    <title>E-Soft Cadastro de Endereços</title>
+    <!--Icon-->
+    <link rel="shortcut icon" href="{% static './images/icon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="title">Cadastrar Endereço</h1>
+    </header>
+
+    <form id="form" class="form" action="{% url 'cadastro' %}" method="post" autocomplete="off">
+        {% csrf_token %}
+
+        <label for="rua" class="label">Nome da rua com número (*)</label>
+        <input id="rua" class="text" name="rua" type="text" placeholder="Nome da rua e número (*)">
+
+        <label for="bairro" class="label">Nome do bairro (*)</label>
+        <input id="bairro" class="text" name="bairro" type="text" placeholder="Bairro (*)">
+
+        <label for="cidade" class="label">Nome da cidade (*)</label>
+        <input id="cidade" class="text" name="cidade" type="text" placeholder="Cidade (*)">
+
+        <label for="uf" class="label">Escolha um dos estados abaixo (*)</label>
+        <div id="selectDiv" class="select">
+            <select id="uf" name="uf" class="select">
+                <option value="NaS">-- Selecione um estado (*) --</option>
+                <option value="RO">Rondônia</option>
+                <option value="AC">Acre</option>
+                <option value="AM">Amazonas</option>
+                <option value="RR">Roraima</option>
+                <option value="PA">Pará</option>
+                <option value="AP">Amapá</option>
+                <option value="TO">Tocantins</option>
+                <option value="MA">Maranhão</option>
+                <option value="PI">Piauí</option>
+                <option value="CE">Ceará</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="PB">Paraíba</option>
+                <option value="PE">Pernambuco</option>
+                <option value="AL">Alagoas</option>
+                <option value="SE">Sergipe</option>
+                <option value="BA">Bahia</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="GO">Goiás</option>
+                <option value="DF">Distrito Federal</option>
+            </select>
+        </div>
+
+        <label for="complemento" class="label">Complemento (Opcional)</label>
+        <input id="complemento" class="text" name="complemento" type="text" placeholder="Complemento">
+
+        <label for="cep" class="label">Número do CEP | Somente números (*)</label>
+        <input id="cep" class="text" name="cep" type="text" placeholder="CEP (*)">
+
+        <button class="botao" style="background-image: linear-gradient(to left, #624CAB, #7189FF);"
+            type="submit">Cadastrar</button>
+    </form>
+
+    <a href="{% url 'home' %}" class="voltar">Voltar</a>
+
+    <footer>
+        <p class="footer">Desenvolvido por <a class="link" href="https://github.com/firminoneto11"
+                target="_blank">Firmino
+                Neto</a></p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/firmino-neto-4a0010158/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/firminoneto11" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/firminoneto11/" target="_blank"><i
+                    class="fab fa-instagram-square"></i></a>
+        </div>
+    </footer>
+
+    <!--Seção de validação de inputs-->
+    <script src="{% static './js/validation.js' %}"></script>
+</body>
+
+</html>

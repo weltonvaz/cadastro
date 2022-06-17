@@ -1,0 +1,62 @@
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.form {
+    animation: transitionIn 1s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: #C1CEFE solid 2px;
+    border-radius: 5px;
+    min-width: fit-content;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+}
+
+.form .text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5%;
+    padding: 20px;
+    border: black solid 2px;
+    border-radius: 5px;
+    min-width: fit-content;
+    width: 50%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.form .text:hover {
+    border: greenyellow solid 2px;
+    border-radius: 5px;
+}
+
+.form .text:focus {
+    border: blue solid 2px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.label {
+    display: block;
+    width: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Helvetica;
+    font-size: 1rem;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: black;
+}
